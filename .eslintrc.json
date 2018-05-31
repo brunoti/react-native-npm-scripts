@@ -1,0 +1,33 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "plugins": [
+    "babel"
+  ],
+  "globals": {
+    "fetch": false,
+    "__DEV__": false,
+    "FormData": false
+  },
+  "rules": {
+    "func-names": ["error", "never"],
+    "react/prop-types": [true, {
+      "ignore": "navigation"
+    }],
+    "react/jsx-filename-extension": 0,
+    "react/require-default-props": 0,
+    "react/no-unused-prop-types": 0,
+    "react/sort-comp": 0,
+    "react/no-typos": 0,
+    "react/no-array-index-key": 0,
+    "class-methods-use-this": 0,
+    "global-require": 0,
+    "no-console": 0,
+    "camelcase": 0,
+    "semi": 0,
+    "import/no-dynamic-require": 0,
+    "no-underscore-dangle": ["error", {
+      "allow": ["_root"]
+    }]
+  }
+}

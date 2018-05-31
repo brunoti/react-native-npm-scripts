@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+const packageJson = require('../package.json');
+const get = require('lodash/get');
+
+console.log(get(packageJson, process.argv[2]));
+
+// vim:ft=javascript

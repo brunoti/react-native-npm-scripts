@@ -1,0 +1,25 @@
+{
+  "name": "react-native-npm-scripts",
+  "version": "1.0.1",
+  "description": "A package to update my packages or to start new projects!",
+  "main": "./install-scripts.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunoti/react-native-npm-scripts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunoti/react-native-npm-scripts/issues"
+  },
+  "homepage": "https://github.com/brunoti/react-native-npm-scripts#readme",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "copy-dir": "^0.3.0",
+    "meow": "^5.0.0"
+  },
+  "bin": {
+    "react-native-npm-scripts": "./cli.js"
+  }
+}

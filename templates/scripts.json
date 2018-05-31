@@ -1,0 +1,22 @@
+{
+  "update-scripts": "react-native-npm-scripts install",
+  "android:codepush": "appcenter codepush release-react -a CODE_PUSH_ANDROID --output-dir ./build",
+  "android:codepush-list": "appcenter codepush deployment list -a CODE_PUSH_ANDROID",
+  "android:codepush-promote": "appcenter codepush promote -a CODE_PUSH_ANDROID -s Staging -d Production",
+  "android:debug": "react-native run-android",
+  "android:release": "cd android && ./gradlew assembleRelease; cd ../",
+  "android:staging": "cd android && ./gradlew assembleReleaseStaging; cd ../",
+  "android:install:staging": "adb install ./android/app/build/outputs/apk/releaseStaging/app-releaseStaging.apk",
+  "android:install:release": "adb install ./android/app/build/outputs/apk/release/app-release.apk",
+  "ios:codepush": "appcenter codepush release-react -a CODE_PUSH_IOS --output-dir ./build",
+  "ios:codepush-list": "appcenter codepush deployment list -a CODE_PUSH_IOS",
+  "ios:codepush-promote": "appcenter codepush promote -a CODE_PUSH_IOS -s Staging -d Production",
+  "ios:staging": "react-native run-ios --configuration Staging",
+  "ios:release": "react-native run-ios --configuration Release",
+  "ios:debug": "react-native run-ios",
+  "ios:publish": "cd ios && fastlane release; cd ../",
+  "bugsnag:upload": "./scripts/bugsnag-upload",
+  "install:devops": "yarn add global bugsnag-sourcemaps appcenter",
+  "install:ios-devops": "gem install fastlane match gym",
+  "install:eslint": "yarn add global eslint eslint-config-airbnb eslint-plugin-babel eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react babel-parser"
+}

@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+bugsnag-sourcemaps upload \
+    --api-key "$(node ./scripts/get-conf BUGSNAG_API_KEY)" \
+    --code-bundle-id "$(node ./scripts/get-conf codePush)" \
+    --app-version "$(node ./scripts/get-conf version)" \
+    --source-map build/CodePush/main.jsbundle.map \
+    --minified-file build/CodePush/main.jsbundle \
+    --minified-url main.jsbundle \
+    --upload-sources \
+    --add-wildcard-prefix
+
+# vim:ft=sh
